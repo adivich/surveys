@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('surveys.module.js', ['ngRoute']);
+angular.module('surveys.module.js', ['ngRoute','surveys-data.module.js']);

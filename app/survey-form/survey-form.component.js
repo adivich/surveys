@@ -3,8 +3,12 @@
 angular.module('survey-form.module.js')
     .component('surveyForm', {
         templateUrl: 'survey-form/survey-form.template.html',
-        controller: ['$routeParams', function SurveyFormController($routeParams) {
-            this.surveysId = $routeParams.surveysId;
+        controller: ['$routeParams','surveysListData', function SurveyFormController($routeParams, surveysListData) {
+            var index = parseInt($routeParams.surveysId)
+
+            this.survey = surveysListData[index];
+            this.questionIndex = 0;
+            this.currentQuestion = this.survey.questions[this.questionIndex];
 
         }]
     });

@@ -1,5 +1,12 @@
-<p>This is the partial for view 2.</p>
-<p>
-  {{$ctrl.surveysId}}
-  Showing of 'interpolate' filter:
-</p>
+<div>
+  <h1>{{$ctrl.survey.title}}</h1>
+  <h2>{{$ctrl.survey.description}}</h2>
+
+  {{$ctrl.questionIndex +1}}. {{$ctrl.currentQuestion.question}}
+
+  <div ng-repeat="(key, value) in $ctrl.currentQuestion.answers">
+    <input type="checkbox" value="value.selected" name="survey_option_{{key}}">
+    <label>{{value.text}}</label>
+  </div>
+
+</div>

@@ -1,4 +1,4 @@
-angular.module('surveys.module.js').
+angular.module('surveys-data.module.js').
     factory('surveysListData', function() {
     var surveysListDataInstance = [
         {
