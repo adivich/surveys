@@ -3,7 +3,8 @@
 angular.module('survey-form.module.js')
     .component('surveyForm', {
         templateUrl: 'survey-form/survey-form.template.html',
-        controller: function SurveyFormController() {
-            this.survey = {}
-        }
+        controller: ['$routeParams', function SurveyFormController($routeParams) {
+            this.surveysId = $routeParams.surveysId;
+
+        }]
     });

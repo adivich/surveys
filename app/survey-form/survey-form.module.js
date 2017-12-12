@@ -1,3 +1,5 @@
 'use strict';
 
-angular.module('survey-form.module.js',[]);
+angular.module('survey-form.module.js',[
+    'ngRoute'
+]);
