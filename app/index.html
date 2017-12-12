@@ -20,18 +20,7 @@
 </head>
 <body ng-app="surveyApp">
 <div>
-    <ul class="menu">
-        <li><a href="#!/surveys">surveys</a></li>
-        <li><a href="#!/view2">view2</a></li>
-    </ul>
 
-    <surveys-list></surveys-list>
-
-   <!-- <ul>
-        <li ng-repeat="survey in surveys">
-            <span>{{survey.name}}</span>
-        </li>
-    </ul>-->
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.</p>
@@ -48,9 +37,15 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="app.module.js"></script>
+<script src="app.config.js"></script>
+
 <script src="surveys/surveys.module.js"></script>
 <script src="surveys/surveys-list.component.js"></script>
-<script src="view2/view2.js"></script>
+...
+<script src="survey-form/survey-form.module.js"></script>
+<script src="survey-form/survey-form.component.js"></script>
+
+
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

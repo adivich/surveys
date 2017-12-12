@@ -3,5 +3,6 @@
 // Define the `surveyApp` module
 angular.module('surveyApp', [
     'ngRoute',
-    'surveys.module.js'
+    'surveys.module.js',
+    'survey-form.module.js'
 ]);
