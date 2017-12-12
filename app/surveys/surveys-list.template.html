@@ -1,5 +1,7 @@
-<ul>
-    <li ng-repeat="survey in $ctrl.surveys">
-        <a ng-href="#/surveys/{{$index}}">{{survey.title}}</a>
-    </li>
-</ul>
+<div class="surveys">
+    <ul>
+        <li ng-repeat="survey in $ctrl.surveys" class="survey-item">
+            <a ng-href="#/surveys/{{$index}}">{{survey.title}}</a>
+        </li>
+    </ul>
+</div>

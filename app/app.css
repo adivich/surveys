@@ -1,4 +1,5 @@
 /* app css stylesheet */
+/*
 
 .menu {
   list-style: none;
@@ -22,4 +23,24 @@
 .menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
+}
+*/
+
+.surveys{
+
+}
+
+.surveys .survey-item{
+  display: block;
+  padding: 4px;
+  height: 115px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.surveys .survey-item a{
+  text-decoration: none;
+  color: black;
 }
