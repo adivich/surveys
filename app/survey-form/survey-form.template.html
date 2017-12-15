@@ -1,12 +1,20 @@
 <div>
-  <h1>{{$ctrl.survey.title}}</h1>
-  <h2>{{$ctrl.survey.description}}</h2>
+  <h1>{{surveyForm.survey.title}}</h1>
+  <h2>{{surveyForm.survey.description}}</h2>
 
-  {{$ctrl.questionIndex +1}}. {{$ctrl.currentQuestion.question}}
+  {{surveyForm.questionIndex +1}}. {{surveyForm.currentQuestion.question}}
 
-  <div ng-repeat="(key, value) in $ctrl.currentQuestion.answers">
+  <div ng-repeat="(key, value) in surveyForm.currentQuestion.answers">
     <input type="checkbox" value="value.selected" name="survey_option_{{key}}">
     <label>{{value.text}}</label>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-primary" ng-class="{disabled: surveyForm.questionIndex == 0}">Previous</button>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn btn-primary">Next</button>
+    </div>
   </div>
 
 </div>
