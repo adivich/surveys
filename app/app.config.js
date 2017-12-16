@@ -6,7 +6,7 @@ angular.module('surveyApp').config(['$locationProvider', '$routeProvider',
 
         $routeProvider.when('/surveys', {
             template: '<surveys-list></surveys-list>'
-        }).when('/surveys/:surveysId', {
+        }).when('/surveys/:surveysId/steps/:surveyStep', {
             template: '<survey-form></survey-form>'
         }).otherwise('/surveys');
     }

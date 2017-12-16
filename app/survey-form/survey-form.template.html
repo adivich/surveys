@@ -1,4 +1,4 @@
-<div>
+<div class="survey-form">
     <h1>{{surveyForm.survey.title}}</h1>
     <h2>{{surveyForm.survey.description}}</h2>
 
@@ -8,24 +8,26 @@
       <label>{{value.text}}</label>
     </div>-->
     <div class="row">
-        <div class="col-sm-6">
-            <button class="btn btn-primary" ng-click="surveyForm.showPrevious()"
+
+        <div class="col-6">
+            <button class="btn btn-primary previous" ng-click="surveyForm.showPrevious()"
                     ng-disabled="surveyForm.questionIndex == 0">Previous
             </button>
         </div>
-        <div class="col-sm-6">
-            <button class="btn btn-primary" ng-click="surveyForm.showNext()"
+        <div class="col-6">
+            <button class="btn btn-primary next" ng-click="surveyForm.showNext()"
                     ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex >= surveyForm.survey.questions.length - 1">
                 Next
             </button>
         </div>
     </div>
     <div class="row">
-        <button class="btn btn-primary" ng-click="surveyForm.submit()"
-                ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex < surveyForm.survey.questions.length - 1">
-            Next
-        </button>
+        <div class="col-6"></div>
+        <div class="col-6">
+            <button class="btn btn-primary submit" ng-click="surveyForm.submit()"
+                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex < surveyForm.survey.questions.length - 1">
+                Submit
+            </button>
+        </div>
     </div>
-   <!-- {{surveyForm.currentQuestion}} <br/>
-    surveyForm.questionIndex < surveyForm.survey.questions.length - 1    {{ surveyForm.questionIndex < surveyForm.survey.questions.length - 1}}
---></div>
+</div>

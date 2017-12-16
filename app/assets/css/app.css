@@ -30,6 +30,13 @@
 
 }
 
+.survey-form .btn.previous,
+.survey-form .btn.next,
+.survey-form .btn.submit{
+  width: 75%;
+  margin: 20px 0 0;
+  padding: 8px;
+}
 .surveys .survey-item{
   display: block;
   padding: 4px;

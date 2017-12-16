@@ -8,11 +8,13 @@ angular.module('survey-form.module.js')
         controller: [ function SurveyStepController() {
             var selectedCount = 0;
 
-            function handleAnswerToggle(){
-                selectedCount++;
-                if(selectedCount >0){
-                    this.step.isValid = true;
+            function handleAnswerToggle(answerValue){
+                if(answerValue){
+                    selectedCount++;
+                } else {
+                    selectedCount--;
                 }
+                this.step.isValid = (selectedCount >= this.step.minimumChoicesRequired);
             }
             //init selectedIndexes with false
             this.step.selectedIndexes  = Array(this.step.answers.length).fill(false);

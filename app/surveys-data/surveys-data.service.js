@@ -8,11 +8,12 @@ angular.module('surveys-data.module.js').
                 {
                     "question": "What is your favorite pet (select one answer)?",
                     "answers": [
-                        {"text": "Cat", "selectedCount": 0},
-                        {"text": "Dog", "selectedCount": 0},
-                        {"text": "Mouse", "selectedCount": 0},
-                        {"text": "Parrot", "selectedCount": 0}
-                    ]
+                        {"text": "Cat"},
+                        {"text": "Dog"},
+                        {"text": "Mouse"},
+                        {"text": "Parrot"}
+                    ],
+                    "minimumChoicesRequired": 1
                 },
                 {
                     "question": "What animals you are afraid of? (select as many as you like)",
@@ -24,7 +25,9 @@ angular.module('surveys-data.module.js').
                         {"text": "Bee"},
                         {"text": "Lion"},
                         {"text": "Monkey"}
-                    ]
+                    ],
+                    "minimumChoicesRequired": 1
+
                 }
             ]
 
@@ -41,16 +44,18 @@ angular.module('surveys-data.module.js').
                         {"text": "Blue"},
                         {"text": "Green"},
                         {"text": "rgba(255,255,255,0)"}
-                    ]
+                    ],
+                    "minimumChoicesRequired": 1
                 },
                 {
-                    "question": "What is the difference between pink and magenta? (select as many as you like)",
+                    "question": "What is the difference between pink and magenta? (select at least 2 answers)",
                     "answers": [
                         {"text": "No"},
                         {"text": "Magenta is a light purple"},
                         {"text": "Magenta is having the colour of fuchsia, fuchsine, light purple"},
                         {"text": "Pink is having a colour between red and white"}
-                    ]
+                    ],
+                    "minimumChoicesRequired": 2
                 }
             ]
 
