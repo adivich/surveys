@@ -8,6 +8,9 @@ angular.module('surveyApp').config(['$locationProvider', '$routeProvider',
             template: '<surveys-list></surveys-list>'
         }).when('/surveys/:surveysId/steps/:surveyStep', {
             template: '<survey-form></survey-form>'
+        }).when('/surveys/:surveysId/results', {
+            templateUrl: 'survey-results/survey-results.template.html',
+            controller: 'SurveyResultsController'
         }).otherwise('/surveys');
     }
 ]);

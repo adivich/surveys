@@ -4,7 +4,7 @@ angular.module('surveys-data.module.js').
         {
             "title": "Animals survey",
             "description": "A survey about animals",
-            "questions": [
+            "steps": [
                 {
                     "question": "What is your favorite pet (select one answer)?",
                     "answers": [
@@ -36,7 +36,7 @@ angular.module('surveys-data.module.js').
         {
             "title": "Colors survey",
             "description": "A survey about colors",
-            "questions": [
+            "steps": [
                 {
                     "question": "What is your favorite pet (select one answer)?",
                     "answers": [

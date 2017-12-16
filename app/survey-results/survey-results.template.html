@@ -1,0 +1,18 @@
+<h1>Survey Results</h1>
+<h2>{{::chart.title}}</h2>
+<p>
+  {{::chart.description}}
+</p>
+<div ng-repeat="step in chart.steps">
+  <div>
+    <div class="col-lg-6 col-sm-12" id="pie-chart">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{::step.question}}</div>
+        <div class="panel-body">
+          <canvas id="pie" class="chart chart-pie chart-xs" chart-data="step.data"
+                  chart-labels="step.answers" chart-options="options"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

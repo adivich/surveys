@@ -8,7 +8,7 @@ angular.module('survey-form.module.js')
         controller: ['$routeParams','$location','surveysListData', function SurveyFormController($routeParams,$location, surveysListData) {
 
             function getCurrentQuestion(survey, index){
-                return survey.questions[index];
+                return survey.steps[index];
             }
 
             var index = parseInt($routeParams.surveysId);
@@ -20,7 +20,6 @@ angular.module('survey-form.module.js')
             this.questionIndex = surveyStep - 1;
             this.currentQuestion = getCurrentQuestion(this.survey, this.questionIndex);
 
-            var question = this.currentQuestion;
             this.showPrevious = function () {
                 this.questionIndex--;
                 this.currentQuestion = getCurrentQuestion(this.survey, this.questionIndex);

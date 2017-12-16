@@ -3,10 +3,6 @@
     <h2>{{surveyForm.survey.description}}</h2>
 
     <survey-step step="surveyForm.currentQuestion" step-num="{{surveyForm.questionIndex+1}}"></survey-step>
-    <!--<div ng-repeat="(key, value) in surveyForm.currentQuestion.answers">
-      <input type="checkbox" value="value.selected" name="survey_option_{{key}}">
-      <label>{{value.text}}</label>
-    </div>-->
     <div class="row">
 
         <div class="col-6">
@@ -16,7 +12,7 @@
         </div>
         <div class="col-6">
             <button class="btn btn-primary next" ng-click="surveyForm.showNext()"
-                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex >= surveyForm.survey.questions.length - 1">
+                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex >= surveyForm.survey.steps.length - 1">
                 Next
             </button>
         </div>
@@ -25,7 +21,7 @@
         <div class="col-6"></div>
         <div class="col-6">
             <button class="btn btn-primary submit" ng-click="surveyForm.submit()"
-                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex < surveyForm.survey.questions.length - 1">
+                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex < surveyForm.survey.steps.length - 1">
                 Submit
             </button>
         </div>
