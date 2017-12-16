@@ -1,0 +1,20 @@
+<div>
+
+  {{surveyStep.stepNum}}. {{surveyStep.step.question}}
+
+  <div ng-repeat="(key, value) in surveyStep.step.answers">
+    <input type="checkbox" ng-model="surveyStep.step.selectedIndexes[key]"
+           ng-change="surveyStep.step.onAnswerToggle()"
+           name="survey_option_{{key}}">
+    <label>{{value.text}}</label>
+  </div>
+  <!--<div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-primary" ng-class="{disabled: surveyStep.questionIndex == 0}">Previous</button>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn btn-primary">Next</button>
+    </div>
+  </div>-->
+
+</div>

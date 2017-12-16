@@ -2,5 +2,6 @@
 
 angular.module('survey-form.module.js',[
     'ngRoute',
-    'surveys-data.module.js'
+    'surveys-data.module.js',
+    'survey-step.module.js'
 ]);

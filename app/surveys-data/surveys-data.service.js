@@ -8,10 +8,10 @@ angular.module('surveys-data.module.js').
                 {
                     "question": "What is your favorite pet (select one answer)?",
                     "answers": [
-                        {"text": "Cat"},
-                        {"text": "Dog"},
-                        {"text": "Mouse"},
-                        {"text": "Parrot"}
+                        {"text": "Cat", "selectedCount": 0},
+                        {"text": "Dog", "selectedCount": 0},
+                        {"text": "Mouse", "selectedCount": 0},
+                        {"text": "Parrot", "selectedCount": 0}
                     ]
                 },
                 {

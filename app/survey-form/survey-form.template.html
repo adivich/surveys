@@ -1,20 +1,31 @@
 <div>
-  <h1>{{surveyForm.survey.title}}</h1>
-  <h2>{{surveyForm.survey.description}}</h2>
+    <h1>{{surveyForm.survey.title}}</h1>
+    <h2>{{surveyForm.survey.description}}</h2>
 
-  {{surveyForm.questionIndex +1}}. {{surveyForm.currentQuestion.question}}
-
-  <div ng-repeat="(key, value) in surveyForm.currentQuestion.answers">
-    <input type="checkbox" value="value.selected" name="survey_option_{{key}}">
-    <label>{{value.text}}</label>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <button class="btn btn-primary" ng-class="{disabled: surveyForm.questionIndex == 0}">Previous</button>
+    <survey-step step="surveyForm.currentQuestion" step-num="{{surveyForm.questionIndex+1}}"></survey-step>
+    <!--<div ng-repeat="(key, value) in surveyForm.currentQuestion.answers">
+      <input type="checkbox" value="value.selected" name="survey_option_{{key}}">
+      <label>{{value.text}}</label>
+    </div>-->
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-primary" ng-click="surveyForm.showPrevious()"
+                    ng-disabled="surveyForm.questionIndex == 0">Previous
+            </button>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-primary" ng-click="surveyForm.showNext()"
+                    ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex >= surveyForm.survey.questions.length - 1">
+                Next
+            </button>
+        </div>
     </div>
-    <div class="col-sm-6">
-      <button class="btn btn-primary">Next</button>
+    <div class="row">
+        <button class="btn btn-primary" ng-click="surveyForm.submit()"
+                ng-disabled="!surveyForm.currentQuestion.isValid || surveyForm.questionIndex < surveyForm.survey.questions.length - 1">
+            Next
+        </button>
     </div>
-  </div>
-
-</div>
+   <!-- {{surveyForm.currentQuestion}} <br/>
+    surveyForm.questionIndex < surveyForm.survey.questions.length - 1    {{ surveyForm.questionIndex < surveyForm.survey.questions.length - 1}}
+--></div>
